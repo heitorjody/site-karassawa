@@ -6,10 +6,11 @@ body {
 }
 
 header {
-    background-color: linear-gradient(to right, rgba(0, 0, 139, 0), #00008B, #00008B, rgba(0, 0, 139, 0));
-    color: blue;
+    background-color: linear-gradient(to right, #00008B, #87CEEB, #00008B);
+    color: white;
     text-align: center;
     padding: 10px 0;
+    position: relative;
 }
 
 .header-top {
@@ -53,7 +54,7 @@ nav ul li a:hover {
 }
 
 .header-bottom {
-    background-color: linear-gradient(to right, rgba(0, 0, 139, 0), #00008B, #00008B, rgba(0, 0, 139, 0));
+    background-color: linear-gradient(to right, #00008B, #87CEEB, #00008B);
     padding: 10px 20px;
     display: flex;
     justify-content: center;

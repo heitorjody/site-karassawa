@@ -17,7 +17,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .header-top .logo h1 {
@@ -59,7 +59,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .header-bottom input[type="text"] {
@@ -87,7 +87,7 @@ nav ul li a:hover {
 .banner {
     position: relative;
     width: 100%;
-    height: 300px; /* Ajuste conforme necessário */
+    height: 400px; /* Ajuste conforme necessário */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -101,7 +101,7 @@ nav ul li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 200%;
     object-fit: cover;
     z-index: 0;
 }
@@ -112,7 +112,7 @@ nav ul li a:hover {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 50%; /* Ponto onde o fade começa */
+    left: 60%; /* Ponto onde o fade começa */
     background: linear-gradient(to right, rgba(245, 245, 245, 0), rgba(245, 245, 245, 1));
     z-index: 1;
 }
@@ -184,7 +184,7 @@ footer {
 
 .shop-options li {
     background-color: #f9f9f9;
-    margin: 10px auto;
+    margin: 100px auto;
     padding: 15px 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

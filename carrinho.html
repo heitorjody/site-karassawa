@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Loja Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <h1>Loja Online</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="comissao.html">Pedido de Comissão</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="carrinho">
+        <h2>Seu Carrinho</h2>
+        <div id="carrinho-itens"></div>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Loja Online. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const carrinhoItens = document.getElementById('carrinho-itens');
+
+            if (carrinho.length === 0) {
+                carrinhoItens.innerHTML = '<p>Seu carrinho está vazio.</p>';
+            } else {
+                carrinho.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'carrinho-item';
+                    itemDiv.innerHTML = `
+                        <img src="${item.imagem}" alt="${item.nome}">
+                        <h3>${item.nome}</h3>
+                        <p>${item.descricao}</p>
+                        <button onclick="removerDoCarrinho('${item.nome}')">Remover</button>
+                    `;
+                    carrinhoItens.appendChild(itemDiv);
+                });
+            }
+        });
+
+        function removerDoCarrinho(nome) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho'));
+            carrinho = carrinho.filter(item => item.nome !== nome);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            location.reload();
+        }
+
+        function finalizarCompra() {
+            alert('Compra finalizada com sucesso!');
+            localStorage.removeItem('carrinho');
+            location.reload();
+        }
+    </script>
+</body>
+</html>

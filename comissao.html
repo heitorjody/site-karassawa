@@ -46,6 +46,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const selectedOption = localStorage.getItem('selectedOption');
+            console.log('Selected option from localStorage:', selectedOption); // Log para verificar a opção recuperada
             if (selectedOption) {
                 document.getElementById('produto').value = selectedOption;
                 localStorage.removeItem('selectedOption');

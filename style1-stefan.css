@@ -122,7 +122,7 @@ nav ul li a:hover {
     position: relative;
     z-index: 2;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #dde016;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -132,7 +132,7 @@ nav ul li a:hover {
 }
 
 .banner .shop-now:hover {
-    background-color: #45a049;
+    background-color: #80820d;
 }
 
 .how-it-works {

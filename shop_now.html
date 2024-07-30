@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - Loja Online</title>
-    <link rel="stylesheet" href="style1-stefan.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -15,25 +15,33 @@
         </div>
         <nav>
             <ul>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="comissao.html">Pedido de Comissão</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="shop.html">Shop Now</a></li>
+                <li><a href="produtos.html">Products</a></li>
+                <li><a href="comissao.html">Commissions</a></li>
+                <li><a href="contato.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="shop">
-        <h2>Options</h2>
+        <h2>Escolha sua Opção</h2>
         <ul class="shop-options">
-            <li>COLORED SKETCH ($100 USD)</li>
-            <li>THIGHS UP ($160 USD)</li>
-            <li>FULL BODY ($200 USD)</li>
-            <li>FULL ILLUSTRATION (starting at $300 USD)</li>
+            <li><a href="comissao.html" onclick="selectOption('COLORED SKETCH ($100 USD)')">COLORED SKETCH ($100 USD)</a></li>
+            <li><a href="comissao.html" onclick="selectOption('THIGHS UP ($160 USD)')">THIGHS UP ($160 USD)</a></li>
+            <li><a href="comissao.html" onclick="selectOption('FULL BODY ($200 USD)')">FULL BODY ($200 USD)</a></li>
+            <li><a href="comissao.html" onclick="selectOption('FULL ILLUSTRATION (starting at $300 USD)')">FULL ILLUSTRATION (starting at $300 USD)</a></li>
         </ul>
     </section>
 
     <footer>
         <p>&copy; 2024 Loja Online. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function selectOption(option) {
+            localStorage.setItem('selectedOption', option);
+        }
+    </script>
 </body>
 </html>
+

@@ -4,27 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedido de Comissão - Loja Online</title>
-    <link rel="stylesheet" href="style1-stefan.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="header-top">
             <div class="logo">
-                <h1>Pedido de Comissão</h1>
+                <h1>Loja Online</h1>
             </div>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="comissao.html">Pedido de Comissão</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="shop.html">Shop Now</a></li>
+                <li><a href="produtos.html">Products</a></li>
+                <li><a href="comissao.html">Commissions</a></li>
+                <li><a href="contato.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="header-bottom">
-            <input type="text" placeholder="Buscar produtos">
-            <button>Buscar</button>
-        </div>
     </header>
 
     <section id="comissao">
@@ -47,6 +43,14 @@
         <p>&copy; 2024 Loja Online. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectedOption = localStorage.getItem('selectedOption');
+            if (selectedOption) {
+                document.getElementById('produto').value = selectedOption;
+                localStorage.removeItem('selectedOption');
+            }
+        });
+    </script>
 </body>
 </html>

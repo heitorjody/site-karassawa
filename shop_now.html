@@ -15,7 +15,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="shop.html">Shop Now</a></li>
+                <li><a href="shop_now.html">Shop Now</a></li>
                 <li><a href="produtos.html">Products</a></li>
                 <li><a href="comissao.html">Commissions</a></li>
                 <li><a href="contato.html">Contact</a></li>
@@ -26,10 +26,10 @@
     <section id="shop">
         <h2>Escolha sua Opção</h2>
         <ul class="shop-options">
-            <li><a href="comissao.html" onclick="selectOption('COLORED SKETCH ($100 USD)')">COLORED SKETCH ($100 USD)</a></li>
-            <li><a href="comissao.html" onclick="selectOption('THIGHS UP ($160 USD)')">THIGHS UP ($160 USD)</a></li>
-            <li><a href="comissao.html" onclick="selectOption('FULL BODY ($200 USD)')">FULL BODY ($200 USD)</a></li>
-            <li><a href="comissao.html" onclick="selectOption('FULL ILLUSTRATION (starting at $300 USD)')">FULL ILLUSTRATION (starting at $300 USD)</a></li>
+            <li><a href="#" onclick="selectOption('COLORED SKETCH ($100 USD)')">COLORED SKETCH ($100 USD)</a></li>
+            <li><a href="#" onclick="selectOption('THIGHS UP ($160 USD)')">THIGHS UP ($160 USD)</a></li>
+            <li><a href="#" onclick="selectOption('FULL BODY ($200 USD)')">FULL BODY ($200 USD)</a></li>
+            <li><a href="#" onclick="selectOption('FULL ILLUSTRATION (starting at $300 USD)')">FULL ILLUSTRATION (starting at $300 USD)</a></li>
         </ul>
     </section>
 
@@ -39,9 +39,10 @@
 
     <script>
         function selectOption(option) {
+            console.log('Selected option:', option); // Log para verificar a opção selecionada
             localStorage.setItem('selectedOption', option);
+            window.location.href = 'comissao.html'; // Redirecionar após armazenar a opção
         }
     </script>
 </body>
 </html>
-

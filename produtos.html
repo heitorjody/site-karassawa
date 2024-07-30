@@ -19,6 +19,7 @@
                 <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="comissao.html">Pedido de Comissão</a></li>
                 <li><a href="contato.html">Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
             </ul>
         </nav>
         <div class="header-bottom">
@@ -33,13 +34,13 @@
             <img src="https://cdn.discordapp.com/attachments/234673821418782721/1267885275749683301/emote9.jpg?ex=66aa69ad&is=66a9182d&hm=029ec01ad2c309289a5b24a4a28f6b99fbbedb0543c6df1614df692c25a58479&" alt="Produto 1">
             <h3>Produto 1</h3>
             <p>Descrição do Produto 1</p>
-            <button>Comprar</button>
+            <button onclick="adicionarAoCarrinho('Produto 1', 'Descrição do Produto 1', 'https://cdn.discordapp.com/attachments/234673821418782721/1267885275749683301/emote9.jpg?ex=66aa69ad&is=66a9182d&hm=029ec01ad2c309289a5b24a4a28f6b99fbbedb0543c6df1614df692c25a58479&')">Adicionar ao Carrinho</button>
         </div>
         <div class="produto">
             <img src="https://cdn.discordapp.com/attachments/234673821418782721/1267885275749683301/emote9.jpg?ex=66aa69ad&is=66a9182d&hm=029ec01ad2c309289a5b24a4a28f6b99fbbedb0543c6df1614df692c25a58479&" alt="Produto 2">
             <h3>Produto 2</h3>
             <p>Descrição do Produto 2</p>
-            <button>Comprar</button>
+            <button onclick="adicionarAoCarrinho('Produto 2', 'Descrição do Produto 2', 'https://cdn.discordapp.com/attachments/234673821418782721/1267885275749683301/emote9.jpg?ex=66aa69ad&is=66a9182d&hm=029ec01ad2c309289a5b24a4a28f6b99fbbedb0543c6df1614df692c25a58479&')">Adicionar ao Carrinho</button>
         </div>
         <!-- + produtos e etc-->
     </section>
@@ -47,5 +48,19 @@
     <footer>
         <p>&copy; 2024 Loja Online. Todos os direitos reservados.</p>
     </footer>
+        <script>
+        function adicionarAoCarrinho(nome, descricao, imagem) {
+            let carrinho = localStorage.getItem('carrinho');
+            if (!carrinho) {
+                carrinho = [];
+            } else {
+                carrinho = JSON.parse(carrinho);
+            }
+
+            carrinho.push({ nome, descricao, imagem });
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            alert('Produto adicionado ao carrinho!');
+        }
+    </script>
 </body>
 </html>

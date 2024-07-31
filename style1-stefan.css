@@ -29,7 +29,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -45,7 +45,7 @@ nav ul li a {
     font-weight: bold;
     padding: 10px 20px;
     background-color: #1D2951; /* Azul Royal Escuro */
-    border-radius: 15px;
+    border-radius: 1.5px;
     transition: background-color 0.3s;
 }
 

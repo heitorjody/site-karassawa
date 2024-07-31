@@ -45,7 +45,7 @@ nav ul li a {
     font-weight: bold;
     padding: 10px 20px;
     background-color: #1D2951; /* Azul Royal Escuro */
-    border-radius: 5px;
+    border-radius: 1.5rem;
     transition: background-color 0.3s;
 }
 

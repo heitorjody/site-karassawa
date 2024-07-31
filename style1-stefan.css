@@ -7,7 +7,7 @@ body {
 
 header {
     background: #f7f7f2;
-    color: white;
+    color: #323633;
     text-align: center;
     padding: 80px 0;
     position: relative;
@@ -60,7 +60,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .header-bottom input[type="text"] {
